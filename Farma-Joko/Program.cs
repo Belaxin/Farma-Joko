@@ -9,7 +9,7 @@ namespace Farma_Joko
         static void Main()
         {
             // Pipik
-            // cicina
+            // 2cm mato
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
