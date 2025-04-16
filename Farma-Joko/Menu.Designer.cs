@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             MainMenu = new Panel();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             menuPlay = new Button();
             SelectionScreen = new Panel();
             selectionBack = new Button();
@@ -37,6 +39,8 @@
             kurnikyBack = new Button();
             pictureBox1 = new PictureBox();
             MainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SelectionScreen.SuspendLayout();
             Kurniky.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -44,7 +48,9 @@
             // 
             // MainMenu
             // 
-            MainMenu.BackgroundImage = Properties.Resources.chicken;
+            MainMenu.BackgroundImage = Properties.Resources._180px_Grass;
+            MainMenu.Controls.Add(pictureBox3);
+            MainMenu.Controls.Add(pictureBox2);
             MainMenu.Controls.Add(menuPlay);
             MainMenu.Dock = DockStyle.Fill;
             MainMenu.Location = new Point(0, 0);
@@ -53,10 +59,34 @@
             MainMenu.TabIndex = 2;
             MainMenu.Paint += panel1_Paint;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Anchor = AnchorStyles.Left;
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.BackgroundImage = Properties.Resources._180px_Grass;
+            pictureBox3.Image = Properties.Resources.chicken;
+            pictureBox3.Location = new Point(12, 45);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(182, 273);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Right;
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImage = Properties.Resources._180px_Grass;
+            pictureBox2.Image = Properties.Resources.chicken;
+            pictureBox2.Location = new Point(605, 45);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(182, 273);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
             // menuPlay
             // 
             menuPlay.Anchor = AnchorStyles.Top;
-            menuPlay.Location = new Point(360, 181);
+            menuPlay.Location = new Point(360, 179);
             menuPlay.Name = "menuPlay";
             menuPlay.Size = new Size(75, 25);
             menuPlay.TabIndex = 0;
@@ -139,6 +169,8 @@
             Name = "Menu";
             Text = "Form1";
             MainMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             SelectionScreen.ResumeLayout(false);
             Kurniky.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -156,5 +188,7 @@
         private Button kurnikyBack;
         private PictureBox pictureBox1;
         private Button selectionBack;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
     }
 }

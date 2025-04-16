@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\farma-joko\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|c:\\users\\tomas\\source\\repos\\farma-joko\\farma-joko\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|solutionrelative:farma-joko\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -65,7 +65,7 @@
               "RelativeDocumentMoniker": "Farma-Joko\\Menu.Designer.cs",
               "ToolTip": "C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.Designer.cs*",
               "RelativeToolTip": "Farma-Joko\\Menu.Designer.cs*",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAjwHMAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAjwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T14:43:41.376Z",
               "EditorCaption": ""
@@ -80,8 +80,7 @@
               "RelativeToolTip": "Farma-Joko\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:56:23.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T13:56:23.846Z"
             },
             {
               "$type": "Document",
