@@ -54,41 +54,45 @@
             MainMenu.Controls.Add(menuPlay);
             MainMenu.Dock = DockStyle.Fill;
             MainMenu.Location = new Point(0, 0);
+            MainMenu.Margin = new Padding(3, 4, 3, 4);
             MainMenu.Name = "MainMenu";
-            MainMenu.Size = new Size(799, 380);
+            MainMenu.Size = new Size(913, 507);
             MainMenu.TabIndex = 2;
             MainMenu.Paint += panel1_Paint;
             // 
             // pictureBox3
             // 
             pictureBox3.Anchor = AnchorStyles.Left;
-            pictureBox3.BackColor = Color.White;
-            pictureBox3.BackgroundImage = Properties.Resources._180px_Grass;
+            pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.chicken;
-            pictureBox3.Location = new Point(12, 45);
+            pictureBox3.Location = new Point(14, 60);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(182, 273);
+            pictureBox3.Size = new Size(208, 364);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Anchor = AnchorStyles.Right;
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.BackgroundImage = Properties.Resources._180px_Grass;
+            pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.chicken;
-            pictureBox2.Location = new Point(605, 45);
+            pictureBox2.Location = new Point(678, 60);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 273);
+            pictureBox2.Size = new Size(208, 364);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // menuPlay
             // 
             menuPlay.Anchor = AnchorStyles.Top;
-            menuPlay.Location = new Point(360, 179);
+            menuPlay.Location = new Point(411, 239);
+            menuPlay.Margin = new Padding(3, 4, 3, 4);
             menuPlay.Name = "menuPlay";
-            menuPlay.Size = new Size(75, 25);
+            menuPlay.Size = new Size(86, 33);
             menuPlay.TabIndex = 0;
             menuPlay.Text = "Play";
             menuPlay.UseVisualStyleBackColor = true;
@@ -100,16 +104,18 @@
             SelectionScreen.Controls.Add(selectionKurniky);
             SelectionScreen.Dock = DockStyle.Fill;
             SelectionScreen.Location = new Point(0, 0);
+            SelectionScreen.Margin = new Padding(3, 4, 3, 4);
             SelectionScreen.Name = "SelectionScreen";
-            SelectionScreen.Size = new Size(799, 380);
+            SelectionScreen.Size = new Size(913, 507);
             SelectionScreen.TabIndex = 3;
             // 
             // selectionBack
             // 
             selectionBack.Anchor = AnchorStyles.Top;
-            selectionBack.Location = new Point(640, 181);
+            selectionBack.Location = new Point(731, 241);
+            selectionBack.Margin = new Padding(3, 4, 3, 4);
             selectionBack.Name = "selectionBack";
-            selectionBack.Size = new Size(75, 23);
+            selectionBack.Size = new Size(86, 31);
             selectionBack.TabIndex = 1;
             selectionBack.Text = "back";
             selectionBack.UseVisualStyleBackColor = true;
@@ -118,9 +124,10 @@
             // selectionKurniky
             // 
             selectionKurniky.Anchor = AnchorStyles.Top;
-            selectionKurniky.Location = new Point(360, 181);
+            selectionKurniky.Location = new Point(411, 241);
+            selectionKurniky.Margin = new Padding(3, 4, 3, 4);
             selectionKurniky.Name = "selectionKurniky";
-            selectionKurniky.Size = new Size(75, 23);
+            selectionKurniky.Size = new Size(86, 31);
             selectionKurniky.TabIndex = 0;
             selectionKurniky.Text = "Kurniky";
             selectionKurniky.UseVisualStyleBackColor = true;
@@ -132,16 +139,18 @@
             Kurniky.Controls.Add(pictureBox1);
             Kurniky.Dock = DockStyle.Fill;
             Kurniky.Location = new Point(0, 0);
+            Kurniky.Margin = new Padding(3, 4, 3, 4);
             Kurniky.Name = "Kurniky";
-            Kurniky.Size = new Size(799, 380);
+            Kurniky.Size = new Size(913, 507);
             Kurniky.TabIndex = 2;
             // 
             // kurnikyBack
             // 
             kurnikyBack.Anchor = AnchorStyles.Top;
-            kurnikyBack.Location = new Point(640, 152);
+            kurnikyBack.Location = new Point(731, 203);
+            kurnikyBack.Margin = new Padding(3, 4, 3, 4);
             kurnikyBack.Name = "kurnikyBack";
-            kurnikyBack.Size = new Size(75, 23);
+            kurnikyBack.Size = new Size(86, 31);
             kurnikyBack.TabIndex = 1;
             kurnikyBack.Text = "back";
             kurnikyBack.UseVisualStyleBackColor = true;
@@ -151,21 +160,21 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.Image = Properties.Resources.chicken;
-            pictureBox1.Location = new Point(307, 53);
+            pictureBox1.Location = new Point(351, 71);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(182, 265);
+            pictureBox1.Size = new Size(208, 353);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(799, 380);
+            ClientSize = new Size(913, 507);
             Controls.Add(MainMenu);
             Controls.Add(SelectionScreen);
             Controls.Add(Kurniky);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Menu";
             Text = "Form1";
             MainMenu.ResumeLayout(false);
