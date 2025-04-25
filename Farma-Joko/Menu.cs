@@ -46,5 +46,10 @@ namespace Farma_Joko
         {
 
         }
+
+        private void Kurniky_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
