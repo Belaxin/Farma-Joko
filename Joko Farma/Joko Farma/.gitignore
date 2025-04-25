@@ -1,0 +1,28 @@
+﻿# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Build results
+bin/
+obj/
+
+# Windows thumbnail cache
+Thumbs.db
+
+# IDE/editor specific files
+.vs/
+.idea/
+.vscode/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Temporary files
+*.log
+*.tmp
+*.bak
