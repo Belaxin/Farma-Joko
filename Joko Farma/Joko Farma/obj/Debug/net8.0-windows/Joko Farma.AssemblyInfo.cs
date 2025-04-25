@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Joko Farma")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3ed5ee64dce9354e0136b4ee87aeb6d8ae0c50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+364b2aed70450ae8798f55034d7e1a44a6919af8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Joko Farma")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Joko Farma")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

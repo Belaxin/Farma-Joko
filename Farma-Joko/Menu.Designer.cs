@@ -142,9 +142,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(414, 721);
-            Controls.Add(Kurniky);
-            Controls.Add(SelectionScreen);
             Controls.Add(MainMenu);
+            Controls.Add(SelectionScreen);
+            Controls.Add(Kurniky);
             Font = new Font("Papyrus", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
