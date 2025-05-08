@@ -8,6 +8,7 @@ namespace Farma_Joko
         [STAThread]
         static void Main()
         {
+            System.Diagnostics.Debug.WriteLine("Welcome");
             // Pipik
             // 2cm mato
             // marek hrabovsky
