@@ -8,6 +8,7 @@ namespace Farma_Joko
 
         private Farm farm;
         private System.Windows.Forms.Timer uiTimer = new System.Windows.Forms.Timer();
+        internal Upgrade selectedUpgrade;
 
         public Menu()
         {
@@ -17,6 +18,7 @@ namespace Farma_Joko
             InitializeComponent();
             farm = new Farm();
             updateEggCount(farm.eggCount);
+            updateUpgrade(farm.upgrades);
         }
         private void UiTimer_Tick(object sender, EventArgs e)
         {
@@ -25,16 +27,13 @@ namespace Farma_Joko
             updateMoneyCount(farm.moneyCount);
             UpdateLogStatus(farm.status);
         }
-
         public void UpdateLogStatus(string status)
         {
             statusLabel.Text = status;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+
 
         private void selectionKurniky_Click(object sender, EventArgs e)
         {
@@ -56,6 +55,68 @@ namespace Farma_Joko
             SelectionScreen.BringToFront();
         }
 
+
+
+        private void purchaseChicken_Click(object sender, EventArgs e)
+        {
+            farm.purchaseChicken();
+            System.Diagnostics.Debug.WriteLine("clicked buy chicken");
+        }
+        private void removeChicken_Click(object sender, EventArgs e)
+        {
+            farm.killChicken();
+        }
+        private void sellEggs_Click(object sender, EventArgs e)
+        {
+            farm.sellEggs();
+        }
+        public void updateEggCount(int eggs)
+        {
+            eggCountLabel.Text = "Eggs: " + eggs.ToString();
+        }
+        public void updateChickenCount(int chickens)
+        {
+            chickenCountLabel.Text = "Chickens: " + chickens.ToString();
+        }
+        public void updateMoneyCount(int money)
+        {
+            moneyCountLabel.Text = "Money: $" + money.ToString();
+        }
+
+        private void updateUpgrade(List<Upgrade> list)
+        {
+            foreach (Upgrade upgrade in list)
+            {
+                if (!upgrade.isBought)
+                {
+                    upgradeName.Text = upgrade.name;
+                    upgradeDesc.Text = upgrade.description;
+                    upgradeBuy.Text = "Buy for $" + upgrade.price.ToString();
+                    selectedUpgrade = upgrade;
+                    break;
+                }
+                else
+                {
+
+                    upgradeName.Text = "";
+                    upgradeDesc.Text = "";
+                    upgradeBuy.Text = "";
+                    selectedUpgrade = null;
+                }
+            }
+
+        }
+        private void buyUpgrade_Click(object sender, EventArgs e)
+        {
+            if (!selectedUpgrade.isBought)
+            {
+                farm.buyUpgrade(selectedUpgrade);
+            }
+            updateUpgrade(farm.upgrades);
+        }
+
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -75,38 +136,28 @@ namespace Farma_Joko
         {
 
         }
-        private void purchaseChicken_Click(object sender, EventArgs e)
-        {
-            farm.purchaseChicken();
-            System.Diagnostics.Debug.WriteLine("clicked buy chicken");
-        }
-        private void removeChicken_Click(object sender, EventArgs e)
-        {
-            farm.killChicken();
-        }
-        private void sellEggs_Click(object sender, EventArgs e)
-        {
-            farm.sellEggs();
-        }
-
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
-        public void updateEggCount(int eggs)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            eggCountLabel.Text = "Eggs: " + eggs.ToString();
-        }
-        public void updateChickenCount(int chickens)
-        {
-            chickenCountLabel.Text = "Chickens: " + chickens.ToString();
-        }
-        public void updateMoneyCount(int money)
-        {
-            moneyCountLabel.Text = "Money: $" + money.ToString();
+
         }
 
+
+
         private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void upgradeName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void upgradeDesc_Click(object sender, EventArgs e)
         {
 
         }

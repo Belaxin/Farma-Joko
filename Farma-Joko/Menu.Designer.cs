@@ -33,6 +33,9 @@
             selectionBack = new Button();
             selectionKurniky = new Button();
             Kurniky = new Panel();
+            upgradeDesc = new Label();
+            upgradeName = new Label();
+            upgradeBuy = new Button();
             removeChicken = new Button();
             moneyCountLabel = new Label();
             sellEggs = new Button();
@@ -89,6 +92,9 @@
             // 
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackgroundImage = Properties.Resources._180px_Grass;
+            Kurniky.Controls.Add(upgradeDesc);
+            Kurniky.Controls.Add(upgradeName);
+            Kurniky.Controls.Add(upgradeBuy);
             Kurniky.Controls.Add(removeChicken);
             Kurniky.Controls.Add(moneyCountLabel);
             Kurniky.Controls.Add(sellEggs);
@@ -104,6 +110,39 @@
             Kurniky.Size = new Size(432, 768);
             Kurniky.TabIndex = 2;
             Kurniky.Paint += Kurniky_Paint;
+            // 
+            // upgradeDesc
+            // 
+            upgradeDesc.Anchor = AnchorStyles.Top;
+            upgradeDesc.Location = new Point(228, 597);
+            upgradeDesc.Name = "upgradeDesc";
+            upgradeDesc.Size = new Size(174, 19);
+            upgradeDesc.TabIndex = 11;
+            upgradeDesc.Text = "Temp   ";
+            upgradeDesc.TextAlign = ContentAlignment.MiddleCenter;
+            upgradeDesc.Click += upgradeDesc_Click;
+            // 
+            // upgradeName
+            // 
+            upgradeName.Anchor = AnchorStyles.Top;
+            upgradeName.Location = new Point(228, 555);
+            upgradeName.Name = "upgradeName";
+            upgradeName.Size = new Size(174, 19);
+            upgradeName.TabIndex = 10;
+            upgradeName.Text = "Temp   ";
+            upgradeName.TextAlign = ContentAlignment.MiddleCenter;
+            upgradeName.Click += upgradeName_Click;
+            // 
+            // upgradeBuy
+            // 
+            upgradeBuy.Anchor = AnchorStyles.Top;
+            upgradeBuy.Location = new Point(269, 643);
+            upgradeBuy.Name = "upgradeBuy";
+            upgradeBuy.Size = new Size(96, 29);
+            upgradeBuy.TabIndex = 9;
+            upgradeBuy.Text = "Buy";
+            upgradeBuy.UseVisualStyleBackColor = true;
+            upgradeBuy.Click += buyUpgrade_Click;
             // 
             // removeChicken
             // 
@@ -179,7 +218,7 @@
             // kurnikyBack
             // 
             kurnikyBack.Anchor = AnchorStyles.Top;
-            kurnikyBack.Location = new Point(263, 261);
+            kurnikyBack.Location = new Point(257, 94);
             kurnikyBack.Margin = new Padding(4, 5, 4, 5);
             kurnikyBack.Name = "kurnikyBack";
             kurnikyBack.Size = new Size(108, 37);
@@ -268,5 +307,8 @@
         private Button sellEggs;
         private Label moneyCountLabel;
         private Button removeChicken;
+        private Button upgradeBuy;
+        private Label upgradeDesc;
+        private Label upgradeName;
     }
 }
