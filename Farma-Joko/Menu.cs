@@ -25,9 +25,10 @@ namespace Farma_Joko
             updateEggCount(farm.eggCount);
             updateChickenCount(farm.chickens.Count);
             updateMoneyCount(farm.moneyCount);
-            UpdateLogStatus(farm.status);
+            updateLogStatus(farm.status);
+            updateCoopCount(farm.coop);
         }
-        public void UpdateLogStatus(string status)
+        public void updateLogStatus(string status)
         {
             statusLabel.Text = status;
         }
@@ -62,6 +63,10 @@ namespace Farma_Joko
             farm.purchaseChicken();
             System.Diagnostics.Debug.WriteLine("clicked buy chicken");
         }
+        private void purchaseCoop_Click(object sender, EventArgs e)
+        {
+            farm.purchaseCoop();
+        }
         private void removeChicken_Click(object sender, EventArgs e)
         {
             farm.killChicken();
@@ -82,7 +87,10 @@ namespace Farma_Joko
         {
             moneyCountLabel.Text = "Money: $" + money.ToString();
         }
-
+        private void updateCoopCount(int coops)
+        {
+            coopsCountLabel.Text = "Coops: " + coops.ToString();
+        }
         private void updateUpgrade(List<Upgrade> list)
         {
             foreach (Upgrade upgrade in list)
@@ -108,14 +116,18 @@ namespace Farma_Joko
         }
         private void buyUpgrade_Click(object sender, EventArgs e)
         {
-            if (!selectedUpgrade.isBought)
+            if (selectedUpgrade != null && !selectedUpgrade.isBought)
             {
                 farm.buyUpgrade(selectedUpgrade);
             }
             updateUpgrade(farm.upgrades);
+
         }
 
-
+        private void cheat_Click(object sender, EventArgs e)
+        {
+            farm.cheat(1000);
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

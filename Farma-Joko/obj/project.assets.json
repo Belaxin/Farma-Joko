@@ -8,24 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Tomas\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\matist23\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Farma-Joko.csproj",
+      "projectUniqueName": "C:\\Users\\matist23\\source\\repos\\Farma-Joko\\Joko Farma\\Farma-Joko\\Farma-Joko.csproj",
       "projectName": "Farma-Joko",
-      "projectPath": "C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Farma-Joko.csproj",
-      "packagesPath": "C:\\Users\\Tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\obj\\",
+      "projectPath": "C:\\Users\\matist23\\source\\repos\\Farma-Joko\\Joko Farma\\Farma-Joko\\Farma-Joko.csproj",
+      "packagesPath": "C:\\Users\\matist23\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matist23\\source\\repos\\Farma-Joko\\Joko Farma\\Farma-Joko\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\matist23\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -49,9 +44,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -75,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

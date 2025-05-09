@@ -33,6 +33,9 @@
             selectionBack = new Button();
             selectionKurniky = new Button();
             Kurniky = new Panel();
+            button1 = new Button();
+            coopsCountLabel = new Label();
+            cheat = new Button();
             upgradeDesc = new Label();
             upgradeName = new Label();
             upgradeBuy = new Button();
@@ -92,6 +95,9 @@
             // 
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackgroundImage = Properties.Resources._180px_Grass;
+            Kurniky.Controls.Add(button1);
+            Kurniky.Controls.Add(coopsCountLabel);
+            Kurniky.Controls.Add(cheat);
             Kurniky.Controls.Add(upgradeDesc);
             Kurniky.Controls.Add(upgradeName);
             Kurniky.Controls.Add(upgradeBuy);
@@ -110,6 +116,35 @@
             Kurniky.Size = new Size(432, 768);
             Kurniky.TabIndex = 2;
             Kurniky.Paint += Kurniky_Paint;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(257, 363);
+            button1.Name = "button1";
+            button1.Size = new Size(145, 29);
+            button1.TabIndex = 14;
+            button1.Text = "Buy coop $200";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += purchaseCoop_Click;
+            // 
+            // coopsCountLabel
+            // 
+            coopsCountLabel.AutoSize = true;
+            coopsCountLabel.Location = new Point(322, 0);
+            coopsCountLabel.Name = "coopsCountLabel";
+            coopsCountLabel.Size = new Size(74, 24);
+            coopsCountLabel.TabIndex = 13;
+            coopsCountLabel.Text = "Coops: 1";
+            // 
+            // cheat
+            // 
+            cheat.Location = new Point(294, 167);
+            cheat.Name = "cheat";
+            cheat.Size = new Size(108, 29);
+            cheat.TabIndex = 12;
+            cheat.Text = "Money";
+            cheat.UseVisualStyleBackColor = true;
+            cheat.Click += cheat_Click;
             // 
             // upgradeDesc
             // 
@@ -136,9 +171,9 @@
             // upgradeBuy
             // 
             upgradeBuy.Anchor = AnchorStyles.Top;
-            upgradeBuy.Location = new Point(269, 643);
+            upgradeBuy.Location = new Point(228, 645);
             upgradeBuy.Name = "upgradeBuy";
-            upgradeBuy.Size = new Size(96, 29);
+            upgradeBuy.Size = new Size(174, 29);
             upgradeBuy.TabIndex = 9;
             upgradeBuy.Text = "Buy";
             upgradeBuy.UseVisualStyleBackColor = true;
@@ -146,7 +181,7 @@
             // 
             // removeChicken
             // 
-            removeChicken.Location = new Point(73, 398);
+            removeChicken.Location = new Point(60, 398);
             removeChicken.Name = "removeChicken";
             removeChicken.Size = new Size(149, 29);
             removeChicken.TabIndex = 8;
@@ -157,15 +192,15 @@
             // moneyCountLabel
             // 
             moneyCountLabel.AutoSize = true;
-            moneyCountLabel.Location = new Point(138, 0);
+            moneyCountLabel.Location = new Point(209, 0);
             moneyCountLabel.Name = "moneyCountLabel";
-            moneyCountLabel.Size = new Size(68, 19);
+            moneyCountLabel.Size = new Size(80, 24);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
             // 
             // sellEggs
             // 
-            sellEggs.Location = new Point(73, 478);
+            sellEggs.Location = new Point(60, 478);
             sellEggs.Name = "sellEggs";
             sellEggs.Size = new Size(149, 29);
             sellEggs.TabIndex = 6;
@@ -176,9 +211,9 @@
             // chickenCountLabel
             // 
             chickenCountLabel.AutoSize = true;
-            chickenCountLabel.Location = new Point(58, 0);
+            chickenCountLabel.Location = new Point(94, 0);
             chickenCountLabel.Name = "chickenCountLabel";
-            chickenCountLabel.Size = new Size(74, 19);
+            chickenCountLabel.Size = new Size(86, 24);
             chickenCountLabel.TabIndex = 5;
             chickenCountLabel.Text = "Chickens: 0";
             // 
@@ -188,9 +223,9 @@
             statusLabel.BackColor = Color.Transparent;
             statusLabel.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             statusLabel.ForeColor = Color.Firebrick;
-            statusLabel.Location = new Point(12, 629);
+            statusLabel.Location = new Point(12, 680);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(73, 24);
+            statusLabel.Size = new Size(94, 32);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "status";
             statusLabel.Click += label1_Click;
@@ -200,25 +235,25 @@
             eggCountLabel.AutoSize = true;
             eggCountLabel.Location = new Point(0, 0);
             eggCountLabel.Name = "eggCountLabel";
-            eggCountLabel.Size = new Size(52, 19);
+            eggCountLabel.Size = new Size(63, 24);
             eggCountLabel.TabIndex = 3;
             eggCountLabel.Text = "Eggs: 0";
             eggCountLabel.Click += label1_Click_1;
             // 
             // purchaseChicken
             // 
-            purchaseChicken.Location = new Point(73, 363);
+            purchaseChicken.Location = new Point(60, 363);
             purchaseChicken.Name = "purchaseChicken";
             purchaseChicken.Size = new Size(149, 29);
             purchaseChicken.TabIndex = 2;
-            purchaseChicken.Text = "Buy chicken";
+            purchaseChicken.Text = "Buy chicken $50";
             purchaseChicken.UseVisualStyleBackColor = true;
             purchaseChicken.Click += purchaseChicken_Click;
             // 
             // kurnikyBack
             // 
             kurnikyBack.Anchor = AnchorStyles.Top;
-            kurnikyBack.Location = new Point(257, 94);
+            kurnikyBack.Location = new Point(294, 94);
             kurnikyBack.Margin = new Padding(4, 5, 4, 5);
             kurnikyBack.Name = "kurnikyBack";
             kurnikyBack.Size = new Size(108, 37);
@@ -265,7 +300,7 @@
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(10F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(414, 721);
@@ -310,5 +345,8 @@
         private Button upgradeBuy;
         private Label upgradeDesc;
         private Label upgradeName;
+        private Button cheat;
+        private Label coopsCountLabel;
+        private Button button1;
     }
 }

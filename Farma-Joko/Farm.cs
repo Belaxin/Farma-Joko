@@ -8,6 +8,7 @@ namespace Farma_Joko
 {
     internal class Farm
     {
+        //chickens
         public List<Chicken> chickens = new List<Chicken>();
         private System.Timers.Timer eggTimer = new System.Timers.Timer();
         public int eggCount { get; private set; } = 0;
@@ -15,6 +16,7 @@ namespace Farma_Joko
         public string status { get; private set; } = "";
         private float multiplier { get; set; } = 1f;
         public List<Upgrade> upgrades = new List<Upgrade>();
+        public int coop { get; private set; } = 1;
 
         public Farm()
         {
@@ -28,6 +30,10 @@ namespace Farma_Joko
             upgrades.Sort((a, b) => a.price.CompareTo(b.price));
         }
 
+        public void cheat(int m)
+        {
+            moneyCount += m;
+        }
 
         private void EggTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
@@ -43,17 +49,34 @@ namespace Farma_Joko
             moneyCount += eggCount * 20;
             eggCount = 0;
         }
+        public void purchaseCoop()
+        {
+            if (moneyCount >= 200)
+            {
+                coop++;
+                moneyCount -= 200;
+                status = "Bought a coop";
+            }
+            else { status = "insufficent balance"; }
+        }
         public void purchaseChicken()
         {
-            if (moneyCount >= 50)
+            if (chickens.Count/coop < 10)
             {
-                chickens.Add(new Chicken());
-                moneyCount -= 50;
-                status = "Bought a " + chickens.Last<Chicken>().GetBreed();
-                updateEggTimerInterval();
+                if (moneyCount >= 50)
+                {
+                    chickens.Add(new Chicken());
+                    moneyCount -= 50;
+                    status = "Bought a " + chickens.Last<Chicken>().GetBreed();
+                    updateEggTimerInterval();
+                }
+                else
+                {
+                    status = "Insufficent balance";
+                }
             }
             else {
-                status = "Insufficent balance";
+                status = "Insufficent space";
             }
         }
         public void killChicken()
@@ -66,6 +89,23 @@ namespace Farma_Joko
                 status = "Killed a " + chickens.Last<Chicken>().GetBreed();
             }
         }
+
+        protected void updateEggTimerInterval()
+        {
+            if (chickens.Count > 0)
+            {
+                eggTimer.Stop();
+                eggTimer.Interval = 30000 / (chickens.Count*multiplier) ;
+                eggTimer.Start();
+            }
+            else
+            {
+                eggTimer.Stop();
+            }
+
+        }
+
+
         public void buyUpgrade(Upgrade upgrade)
         {
             if (!upgrade.isBought)
@@ -82,19 +122,6 @@ namespace Farma_Joko
         }
 
 
-        protected void updateEggTimerInterval()
-        {
-            if (chickens.Count > 0)
-            {
-                eggTimer.Stop();
-                eggTimer.Interval = 30000 / (chickens.Count*multiplier) ;
-                eggTimer.Start();
-            }
-            else
-            {
-                eggTimer.Stop();
-            }
-        }
     }
 }
 
