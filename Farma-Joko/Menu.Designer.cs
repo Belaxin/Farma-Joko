@@ -34,7 +34,6 @@
             selectionKurniky = new Button();
             Kurniky = new Panel();
             button1 = new Button();
-            coopsCountLabel = new Label();
             cheat = new Button();
             upgradeDesc = new Label();
             upgradeName = new Label();
@@ -96,7 +95,6 @@
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackgroundImage = Properties.Resources._180px_Grass;
             Kurniky.Controls.Add(button1);
-            Kurniky.Controls.Add(coopsCountLabel);
             Kurniky.Controls.Add(cheat);
             Kurniky.Controls.Add(upgradeDesc);
             Kurniky.Controls.Add(upgradeName);
@@ -126,15 +124,6 @@
             button1.Text = "Buy coop $200";
             button1.UseVisualStyleBackColor = true;
             button1.Click += purchaseCoop_Click;
-            // 
-            // coopsCountLabel
-            // 
-            coopsCountLabel.AutoSize = true;
-            coopsCountLabel.Location = new Point(322, 0);
-            coopsCountLabel.Name = "coopsCountLabel";
-            coopsCountLabel.Size = new Size(74, 24);
-            coopsCountLabel.TabIndex = 13;
-            coopsCountLabel.Text = "Coops: 1";
             // 
             // cheat
             // 
@@ -192,9 +181,9 @@
             // moneyCountLabel
             // 
             moneyCountLabel.AutoSize = true;
-            moneyCountLabel.Location = new Point(209, 0);
+            moneyCountLabel.Location = new Point(228, 0);
             moneyCountLabel.Name = "moneyCountLabel";
-            moneyCountLabel.Size = new Size(80, 24);
+            moneyCountLabel.Size = new Size(68, 19);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
             // 
@@ -211,9 +200,9 @@
             // chickenCountLabel
             // 
             chickenCountLabel.AutoSize = true;
-            chickenCountLabel.Location = new Point(94, 0);
+            chickenCountLabel.Location = new Point(79, 0);
             chickenCountLabel.Name = "chickenCountLabel";
-            chickenCountLabel.Size = new Size(86, 24);
+            chickenCountLabel.Size = new Size(74, 19);
             chickenCountLabel.TabIndex = 5;
             chickenCountLabel.Text = "Chickens: 0";
             // 
@@ -225,7 +214,7 @@
             statusLabel.ForeColor = Color.Firebrick;
             statusLabel.Location = new Point(12, 680);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(94, 32);
+            statusLabel.Size = new Size(73, 24);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "status";
             statusLabel.Click += label1_Click;
@@ -235,7 +224,7 @@
             eggCountLabel.AutoSize = true;
             eggCountLabel.Location = new Point(0, 0);
             eggCountLabel.Name = "eggCountLabel";
-            eggCountLabel.Size = new Size(63, 24);
+            eggCountLabel.Size = new Size(52, 19);
             eggCountLabel.TabIndex = 3;
             eggCountLabel.Text = "Eggs: 0";
             eggCountLabel.Click += label1_Click_1;
@@ -300,7 +289,7 @@
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 24F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(414, 721);
@@ -346,7 +335,6 @@
         private Label upgradeDesc;
         private Label upgradeName;
         private Button cheat;
-        private Label coopsCountLabel;
         private Button button1;
     }
 }

@@ -23,10 +23,9 @@ namespace Farma_Joko
         private void UiTimer_Tick(object sender, EventArgs e)
         {
             updateEggCount(farm.eggCount);
-            updateChickenCount(farm.chickens.Count);
+            updateChickenCount(farm.chickens.Count, farm.coop);
             updateMoneyCount(farm.moneyCount);
             updateLogStatus(farm.status);
-            updateCoopCount(farm.coop);
         }
         public void updateLogStatus(string status)
         {
@@ -79,17 +78,13 @@ namespace Farma_Joko
         {
             eggCountLabel.Text = "Eggs: " + eggs.ToString();
         }
-        public void updateChickenCount(int chickens)
+        public void updateChickenCount(int chickens, int coops)
         {
-            chickenCountLabel.Text = "Chickens: " + chickens.ToString();
+            chickenCountLabel.Text = $"Chickens: {chickens.ToString()} / {(coops*10).ToString()} ";
         }
         public void updateMoneyCount(int money)
         {
             moneyCountLabel.Text = "Money: $" + money.ToString();
-        }
-        private void updateCoopCount(int coops)
-        {
-            coopsCountLabel.Text = "Coops: " + coops.ToString();
         }
         private void updateUpgrade(List<Upgrade> list)
         {
