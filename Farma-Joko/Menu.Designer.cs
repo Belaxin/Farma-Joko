@@ -57,10 +57,10 @@
             // 
             // SelectionScreen
             // 
-            SelectionScreen.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            SelectionScreen.Anchor = AnchorStyles.None;
             SelectionScreen.Controls.Add(selectionBack);
             SelectionScreen.Controls.Add(selectionKurniky);
-            SelectionScreen.Location = new Point(0, 0);
+            SelectionScreen.Location = new Point(0, -6);
             SelectionScreen.Margin = new Padding(4, 5, 4, 5);
             SelectionScreen.Name = "SelectionScreen";
             SelectionScreen.Size = new Size(432, 768);
@@ -92,6 +92,7 @@
             // 
             // Kurniky
             // 
+            Kurniky.Anchor = AnchorStyles.None;
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackgroundImage = Properties.Resources._180px_Grass;
             Kurniky.Controls.Add(button1);
@@ -108,7 +109,7 @@
             Kurniky.Controls.Add(purchaseChicken);
             Kurniky.Controls.Add(kurnikyBack);
             Kurniky.Controls.Add(pictureBox1);
-            Kurniky.Location = new Point(0, 0);
+            Kurniky.Location = new Point(0, -8);
             Kurniky.Margin = new Padding(4, 5, 4, 5);
             Kurniky.Name = "Kurniky";
             Kurniky.Size = new Size(432, 768);
@@ -202,9 +203,9 @@
             chickenCountLabel.AutoSize = true;
             chickenCountLabel.Location = new Point(79, 0);
             chickenCountLabel.Name = "chickenCountLabel";
-            chickenCountLabel.Size = new Size(74, 19);
+            chickenCountLabel.Size = new Size(88, 19);
             chickenCountLabel.TabIndex = 5;
-            chickenCountLabel.Text = "Chickens: 0";
+            chickenCountLabel.Text = "Chickens: 0/0";
             // 
             // statusLabel
             // 
@@ -256,7 +257,7 @@
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.chicken;
-            pictureBox1.Location = new Point(34, 78);
+            pictureBox1.Location = new Point(30, 61);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(188, 277);
@@ -277,10 +278,11 @@
             // 
             // MainMenu
             // 
+            MainMenu.Anchor = AnchorStyles.None;
             MainMenu.AutoSize = true;
             MainMenu.BackgroundImage = Properties.Resources._180px_Grass;
             MainMenu.Controls.Add(menuPlay);
-            MainMenu.Location = new Point(0, 0);
+            MainMenu.Location = new Point(0, -6);
             MainMenu.Margin = new Padding(4, 5, 4, 5);
             MainMenu.Name = "MainMenu";
             MainMenu.Size = new Size(432, 768);
@@ -292,7 +294,7 @@
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(414, 721);
+            ClientSize = new Size(428, 752);
             Controls.Add(Kurniky);
             Controls.Add(MainMenu);
             Controls.Add(SelectionScreen);
