@@ -80,7 +80,7 @@ namespace Farma_Joko
         }
         public void updateChickenCount(int chickens, int coops)
         {
-            chickenCountLabel.Text = $"Chickens: {chickens.ToString()} / {(coops*10).ToString()} ";
+            chickenCountLabel.Text = $"Chickens: {chickens.ToString()} / {(coops * 10).ToString()} ";
         }
         public void updateMoneyCount(int money)
         {
@@ -165,6 +165,11 @@ namespace Farma_Joko
         }
 
         private void upgradeDesc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }
