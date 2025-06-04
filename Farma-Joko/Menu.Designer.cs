@@ -50,10 +50,12 @@
             pictureBox1 = new PictureBox();
             menuPlay = new Button();
             MainMenu = new Panel();
+            Info = new Panel();
             SelectionScreen.SuspendLayout();
             Kurniky.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             MainMenu.SuspendLayout();
+            Info.SuspendLayout();
             SuspendLayout();
             // 
             // SelectionScreen
@@ -95,6 +97,7 @@
             // 
             Kurniky.Anchor = AnchorStyles.None;
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Kurniky.Controls.Add(Info);
             Kurniky.Controls.Add(textBox1);
             Kurniky.Controls.Add(button1);
             Kurniky.Controls.Add(cheat);
@@ -102,11 +105,8 @@
             Kurniky.Controls.Add(upgradeName);
             Kurniky.Controls.Add(upgradeBuy);
             Kurniky.Controls.Add(removeChicken);
-            Kurniky.Controls.Add(moneyCountLabel);
             Kurniky.Controls.Add(sellEggs);
-            Kurniky.Controls.Add(chickenCountLabel);
             Kurniky.Controls.Add(statusLabel);
-            Kurniky.Controls.Add(eggCountLabel);
             Kurniky.Controls.Add(purchaseChicken);
             Kurniky.Controls.Add(kurnikyBack);
             Kurniky.Controls.Add(pictureBox1);
@@ -204,12 +204,13 @@
             // 
             moneyCountLabel.AutoSize = true;
             moneyCountLabel.Font = new Font("Verdana", 7.8F);
-            moneyCountLabel.Location = new Point(307, 0);
+            moneyCountLabel.Location = new Point(128, 1);
             moneyCountLabel.Name = "moneyCountLabel";
             moneyCountLabel.Padding = new Padding(5);
             moneyCountLabel.Size = new Size(87, 26);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
+            moneyCountLabel.Click += moneyCountLabel_Click;
             // 
             // sellEggs
             // 
@@ -229,7 +230,7 @@
             // 
             chickenCountLabel.AutoSize = true;
             chickenCountLabel.Font = new Font("Verdana", 7.8F);
-            chickenCountLabel.Location = new Point(146, 0);
+            chickenCountLabel.Location = new Point(0, 0);
             chickenCountLabel.Name = "chickenCountLabel";
             chickenCountLabel.Padding = new Padding(5);
             chickenCountLabel.Size = new Size(108, 26);
@@ -242,7 +243,7 @@
             statusLabel.BackColor = Color.Transparent;
             statusLabel.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             statusLabel.ForeColor = Color.LawnGreen;
-            statusLabel.Location = new Point(27, 400);
+            statusLabel.Location = new Point(154, 459);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new Size(94, 32);
             statusLabel.TabIndex = 4;
@@ -253,7 +254,7 @@
             // 
             eggCountLabel.AutoSize = true;
             eggCountLabel.Font = new Font("Verdana", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            eggCountLabel.Location = new Point(34, 0);
+            eggCountLabel.Location = new Point(71, 13);
             eggCountLabel.Name = "eggCountLabel";
             eggCountLabel.Padding = new Padding(5);
             eggCountLabel.Size = new Size(67, 26);
@@ -326,6 +327,17 @@
             MainMenu.TabIndex = 2;
             MainMenu.Paint += panel1_Paint;
             // 
+            // Info
+            // 
+            Info.BackColor = SystemColors.ActiveCaption;
+            Info.Controls.Add(moneyCountLabel);
+            Info.Controls.Add(eggCountLabel);
+            Info.Controls.Add(chickenCountLabel);
+            Info.Location = new Point(100, 3);
+            Info.Name = "Info";
+            Info.Size = new Size(250, 39);
+            Info.TabIndex = 16;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(10F, 24F);
@@ -348,6 +360,8 @@
             Kurniky.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             MainMenu.ResumeLayout(false);
+            Info.ResumeLayout(false);
+            Info.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -376,5 +390,6 @@
         private Button cheat;
         private Button button1;
         private TextBox textBox1;
+        private Panel Info;
     }
 }

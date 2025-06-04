@@ -136,7 +136,7 @@ namespace Farma_Joko
 
         private void Kurniky_Paint(object sender, PaintEventArgs e)
         {
-                
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -180,6 +180,11 @@ namespace Farma_Joko
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moneyCountLabel_Click(object sender, EventArgs e)
         {
 
         }
