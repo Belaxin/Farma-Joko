@@ -33,6 +33,7 @@
             selectionBack = new Button();
             selectionKurniky = new Button();
             Kurniky = new Panel();
+            textBox1 = new TextBox();
             button1 = new Button();
             cheat = new Button();
             upgradeDesc = new Label();
@@ -60,7 +61,7 @@
             SelectionScreen.Anchor = AnchorStyles.None;
             SelectionScreen.Controls.Add(selectionBack);
             SelectionScreen.Controls.Add(selectionKurniky);
-            SelectionScreen.Location = new Point(0, -130);
+            SelectionScreen.Location = new Point(339, -130);
             SelectionScreen.Margin = new Padding(4, 5, 4, 5);
             SelectionScreen.Name = "SelectionScreen";
             SelectionScreen.Size = new Size(432, 549);
@@ -94,7 +95,7 @@
             // 
             Kurniky.Anchor = AnchorStyles.None;
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            Kurniky.BackgroundImage = Properties.Resources._180px_Grass;
+            Kurniky.Controls.Add(textBox1);
             Kurniky.Controls.Add(button1);
             Kurniky.Controls.Add(cheat);
             Kurniky.Controls.Add(upgradeDesc);
@@ -109,18 +110,26 @@
             Kurniky.Controls.Add(purchaseChicken);
             Kurniky.Controls.Add(kurnikyBack);
             Kurniky.Controls.Add(pictureBox1);
-            Kurniky.Location = new Point(4, 130);
+            Kurniky.Location = new Point(1, 130);
             Kurniky.Margin = new Padding(4, 5, 4, 5);
             Kurniky.Name = "Kurniky";
-            Kurniky.Size = new Size(432, 542);
+            Kurniky.Size = new Size(1105, 504);
             Kurniky.TabIndex = 2;
             Kurniky.Paint += Kurniky_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(356, 332);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 31);
+            textBox1.TabIndex = 15;
+            textBox1.Text = "Sell eggs $20/pc";
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Control;
             button1.Font = new Font("Verdana", 7.8F);
-            button1.Location = new Point(270, 110);
+            button1.Location = new Point(586, 109);
             button1.Name = "button1";
             button1.Size = new Size(150, 30);
             button1.TabIndex = 14;
@@ -145,7 +154,7 @@
             // 
             upgradeDesc.Anchor = AnchorStyles.Top;
             upgradeDesc.Font = new Font("Verdana", 7.8F);
-            upgradeDesc.Location = new Point(250, 235);
+            upgradeDesc.Location = new Point(566, 234);
             upgradeDesc.Name = "upgradeDesc";
             upgradeDesc.Size = new Size(170, 30);
             upgradeDesc.TabIndex = 11;
@@ -157,7 +166,7 @@
             // 
             upgradeName.Anchor = AnchorStyles.Top;
             upgradeName.Font = new Font("Verdana", 7.8F);
-            upgradeName.Location = new Point(250, 200);
+            upgradeName.Location = new Point(566, 199);
             upgradeName.Name = "upgradeName";
             upgradeName.Size = new Size(170, 30);
             upgradeName.TabIndex = 10;
@@ -170,7 +179,7 @@
             upgradeBuy.Anchor = AnchorStyles.Top;
             upgradeBuy.BackColor = SystemColors.Control;
             upgradeBuy.Font = new Font("Verdana", 7.8F);
-            upgradeBuy.Location = new Point(270, 155);
+            upgradeBuy.Location = new Point(586, 154);
             upgradeBuy.Name = "upgradeBuy";
             upgradeBuy.Size = new Size(150, 40);
             upgradeBuy.TabIndex = 9;
@@ -205,13 +214,14 @@
             // sellEggs
             // 
             sellEggs.BackColor = Color.Lime;
+            sellEggs.BackgroundImage = Properties.Resources.vajec1;
+            sellEggs.BackgroundImageLayout = ImageLayout.Center;
             sellEggs.FlatStyle = FlatStyle.Popup;
             sellEggs.Font = new Font("Verdana", 7.8F);
-            sellEggs.Location = new Point(271, 334);
+            sellEggs.Location = new Point(393, 261);
             sellEggs.Name = "sellEggs";
-            sellEggs.Size = new Size(149, 29);
+            sellEggs.Size = new Size(55, 48);
             sellEggs.TabIndex = 6;
-            sellEggs.Text = "Sell eggs $20/pc";
             sellEggs.UseVisualStyleBackColor = false;
             sellEggs.Click += sellEggs_Click;
             // 
@@ -219,7 +229,7 @@
             // 
             chickenCountLabel.AutoSize = true;
             chickenCountLabel.Font = new Font("Verdana", 7.8F);
-            chickenCountLabel.Location = new Point(133, 0);
+            chickenCountLabel.Location = new Point(146, 0);
             chickenCountLabel.Name = "chickenCountLabel";
             chickenCountLabel.Padding = new Padding(5);
             chickenCountLabel.Size = new Size(108, 26);
@@ -243,7 +253,7 @@
             // 
             eggCountLabel.AutoSize = true;
             eggCountLabel.Font = new Font("Verdana", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            eggCountLabel.Location = new Point(0, 0);
+            eggCountLabel.Location = new Point(34, 0);
             eggCountLabel.Name = "eggCountLabel";
             eggCountLabel.Padding = new Padding(5);
             eggCountLabel.Size = new Size(67, 26);
@@ -255,7 +265,7 @@
             // 
             purchaseChicken.BackColor = SystemColors.Control;
             purchaseChicken.Font = new Font("Verdana", 7.8F);
-            purchaseChicken.Location = new Point(270, 65);
+            purchaseChicken.Location = new Point(586, 63);
             purchaseChicken.Name = "purchaseChicken";
             purchaseChicken.Size = new Size(150, 30);
             purchaseChicken.TabIndex = 2;
@@ -269,10 +279,10 @@
             kurnikyBack.BackColor = SystemColors.ControlDark;
             kurnikyBack.FlatStyle = FlatStyle.System;
             kurnikyBack.Font = new Font("Verdana", 7.8F);
-            kurnikyBack.Location = new Point(354, 471);
+            kurnikyBack.Location = new Point(682, 470);
             kurnikyBack.Margin = new Padding(4, 5, 4, 5);
             kurnikyBack.Name = "kurnikyBack";
-            kurnikyBack.Size = new Size(58, 29);
+            kurnikyBack.Size = new Size(65, 29);
             kurnikyBack.TabIndex = 1;
             kurnikyBack.Text = "back";
             kurnikyBack.UseVisualStyleBackColor = false;
@@ -282,18 +292,19 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top;
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.chicken;
-            pictureBox1.Location = new Point(34, 49);
+            pictureBox1.Image = Properties.Resources.kurenec;
+            pictureBox1.Location = new Point(48, 31);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(188, 277);
+            pictureBox1.Size = new Size(267, 288);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // menuPlay
             // 
             menuPlay.Anchor = AnchorStyles.Top;
-            menuPlay.Location = new Point(159, 287);
+            menuPlay.Location = new Point(497, 287);
             menuPlay.Margin = new Padding(4, 5, 4, 5);
             menuPlay.Name = "menuPlay";
             menuPlay.Size = new Size(108, 40);
@@ -306,13 +317,12 @@
             // 
             MainMenu.Anchor = AnchorStyles.None;
             MainMenu.AutoSize = true;
-            MainMenu.BackgroundImage = Properties.Resources._180px_Grass;
             MainMenu.Controls.Add(Kurniky);
             MainMenu.Controls.Add(menuPlay);
-            MainMenu.Location = new Point(0, -130);
+            MainMenu.Location = new Point(-1, -130);
             MainMenu.Margin = new Padding(4, 5, 4, 5);
             MainMenu.Name = "MainMenu";
-            MainMenu.Size = new Size(432, 677);
+            MainMenu.Size = new Size(1109, 677);
             MainMenu.TabIndex = 2;
             MainMenu.Paint += panel1_Paint;
             // 
@@ -321,7 +331,7 @@
             AutoScaleDimensions = new SizeF(10F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(429, 504);
+            ClientSize = new Size(1107, 504);
             Controls.Add(MainMenu);
             Controls.Add(SelectionScreen);
             Font = new Font("Papyrus", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -365,5 +375,6 @@
         private Label upgradeName;
         private Button cheat;
         private Button button1;
+        private TextBox textBox1;
     }
 }
