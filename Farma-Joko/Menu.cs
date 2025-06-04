@@ -12,7 +12,7 @@ namespace Farma_Joko
 
         public Menu()
         {
-            uiTimer.Interval = 100;
+            uiTimer.Interval = 10;
             uiTimer.Start();
             uiTimer.Tick += UiTimer_Tick;
             InitializeComponent();
@@ -22,10 +22,12 @@ namespace Farma_Joko
         }
         private void UiTimer_Tick(object sender, EventArgs e)
         {
+            updateEggSlide(farm.eggSlide.ElapsedMilliseconds, farm.eggTimer.Interval);
             updateEggCount(farm.eggCount);
             updateChickenCount(farm.chickens.Count, farm.coop);
             updateMoneyCount(farm.moneyCount);
             updateLogStatus(farm.status);
+            updateEpS(farm.eggTimer.Interval);
         }
         public void updateLogStatus(string status)
         {
@@ -86,6 +88,10 @@ namespace Farma_Joko
         {
             moneyCountLabel.Text = "Money: $" + money.ToString();
         }
+        public void updateEpS(double eggTimeInterval)
+        {
+            epsLabel.Text = "EpS: " + Math.Round(1000 / eggTimeInterval, 3);
+        }
         private void updateUpgrade(List<Upgrade> list)
         {
             foreach (Upgrade upgrade in list)
@@ -119,6 +125,17 @@ namespace Farma_Joko
 
         }
 
+
+        private void updateEggSlide(long timer, double eggTimeInterval)
+        {
+            double t = timer / eggTimeInterval;
+            Point start = new Point(138, 136);
+            Point end = new Point(65, 175);
+            int x = (int)(start.X + (end.X - start.X) * t);
+            int y = (int)(start.Y + (end.Y - start.Y) * t);
+            pictureBox3.Location = new Point(x, y);
+            pictureBox3.Invalidate();
+        }
         private void cheat_Click(object sender, EventArgs e)
         {
             farm.cheat(1000);
@@ -185,6 +202,26 @@ namespace Farma_Joko
         }
 
         private void moneyCountLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void coop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void epsLabel_Click(object sender, EventArgs e)
         {
 
         }

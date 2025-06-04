@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ namespace Farma_Joko
     {
         //chickens
         public List<Chicken> chickens = new List<Chicken>();
-        private System.Timers.Timer eggTimer = new System.Timers.Timer();
+        public System.Timers.Timer eggTimer = new System.Timers.Timer();
         public int eggCount { get; private set; } = 0;
         public int moneyCount { get; private set; } = 200;
         public string status { get; private set; } = "";
-        private float multiplier { get; set; } = 1f;
+        public float multiplier { get; set; } = 1f;
         public List<Upgrade> upgrades = new List<Upgrade>();
         public int coop { get; private set; } = 1;
 
@@ -39,7 +40,9 @@ namespace Farma_Joko
         {
             eggCount++;
             System.Diagnostics.Debug.WriteLine("A chicken has laid an egg");
-            
+            System.Diagnostics.Debug.WriteLine(eggTimer.Interval);
+            eggSlide.Restart();
+
         }
 
 
@@ -90,12 +93,15 @@ namespace Farma_Joko
             }
         }
 
+        public Stopwatch eggSlide = new Stopwatch();
         protected void updateEggTimerInterval()
         {
             if (chickens.Count > 0)
             {
+                eggSlide.Stop();
                 eggTimer.Stop();
                 eggTimer.Interval = 30000 / (chickens.Count*multiplier) ;
+                eggSlide.Restart();
                 eggTimer.Start();
             }
             else
@@ -115,6 +121,7 @@ namespace Farma_Joko
                     upgrade.isBought = true;
                     multiplier += upgrade.multiplier;
                     moneyCount -= upgrade.price;
+                    updateEggTimerInterval();
                 }
                 else { status = "Insufficent balance"; }
             }
