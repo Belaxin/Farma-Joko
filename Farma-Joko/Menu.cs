@@ -129,8 +129,8 @@ namespace Farma_Joko
         private void updateEggSlide(long timer, double eggTimeInterval)
         {
             double t = timer / eggTimeInterval;
-            Point start = new Point(138, 136);
-            Point end = new Point(65, 175);
+            Point start = new Point(102, 155);
+            Point end = new Point(18, 209);
             int x = (int)(start.X + (end.X - start.X) * t);
             int y = (int)(start.Y + (end.Y - start.Y) * t);
             pictureBox3.Location = new Point(x, y);

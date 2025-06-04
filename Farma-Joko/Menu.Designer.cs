@@ -123,12 +123,14 @@
             // 
             // coop
             // 
+            coop.BackColor = Color.Transparent;
             coop.BackgroundImage = (Image)resources.GetObject("coop.BackgroundImage");
+            coop.BackgroundImageLayout = ImageLayout.Center;
             coop.Controls.Add(pictureBox3);
             coop.Controls.Add(cheat);
             coop.Location = new Point(52, 79);
             coop.Name = "coop";
-            coop.Size = new Size(266, 230);
+            coop.Size = new Size(305, 261);
             coop.TabIndex = 20;
             // 
             // pictureBox3
@@ -136,7 +138,7 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImageLayout = ImageLayout.Center;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(138, 136);
+            pictureBox3.Location = new Point(18, 209);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(25, 25);
             pictureBox3.TabIndex = 18;
@@ -153,7 +155,7 @@
             cheat.Font = new Font("Verdana", 7.8F);
             cheat.ForeColor = Color.Transparent;
             cheat.Image = (Image)resources.GetObject("cheat.Image");
-            cheat.Location = new Point(241, 176);
+            cheat.Location = new Point(212, 221);
             cheat.Margin = new Padding(0);
             cheat.Name = "cheat";
             cheat.Size = new Size(25, 25);
@@ -223,7 +225,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(356, 332);
+            textBox1.Location = new Point(356, 362);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 26);
             textBox1.TabIndex = 15;
@@ -283,7 +285,7 @@
             removeChicken.BackColor = Color.Red;
             removeChicken.FlatStyle = FlatStyle.Popup;
             removeChicken.Font = new Font("Verdana", 7.8F);
-            removeChicken.Location = new Point(34, 334);
+            removeChicken.Location = new Point(14, 360);
             removeChicken.Name = "removeChicken";
             removeChicken.Size = new Size(149, 29);
             removeChicken.TabIndex = 8;
