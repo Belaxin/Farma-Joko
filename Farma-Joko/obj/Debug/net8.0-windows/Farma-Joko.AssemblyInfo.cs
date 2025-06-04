@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Farma-Joko")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a42283d5b8059aa05e507cea74e66f383fc2e6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b9c20172bd91e02d4b0ac090f5f1e8defd7e6c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Farma-Joko")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Farma-Joko")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

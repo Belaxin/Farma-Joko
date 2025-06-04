@@ -30,9 +30,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            SelectionScreen = new Panel();
-            selectionBack = new Button();
-            selectionKurniky = new Button();
+            menuPlay = new Button();
+            MainMenu = new Panel();
             Kurniky = new Panel();
             coop = new DoubleBufferedPanel();
             pictureBox3 = new PictureBox();
@@ -52,50 +51,40 @@
             statusLabel = new Label();
             purchaseChicken = new Button();
             kurnikyBack = new Button();
-            menuPlay = new Button();
-            MainMenu = new Panel();
-            SelectionScreen.SuspendLayout();
+            SelectionScreen = new Panel();
+            selectionBack = new Button();
+            selectionKurniky = new Button();
+            MainMenu.SuspendLayout();
             Kurniky.SuspendLayout();
             coop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             Info.SuspendLayout();
-            MainMenu.SuspendLayout();
+            SelectionScreen.SuspendLayout();
             SuspendLayout();
             // 
-            // SelectionScreen
+            // menuPlay
             // 
-            SelectionScreen.Anchor = AnchorStyles.None;
-            SelectionScreen.Controls.Add(selectionBack);
-            SelectionScreen.Controls.Add(selectionKurniky);
-            SelectionScreen.Location = new Point(339, -130);
-            SelectionScreen.Margin = new Padding(4, 5, 4, 5);
-            SelectionScreen.Name = "SelectionScreen";
-            SelectionScreen.Size = new Size(432, 549);
-            SelectionScreen.TabIndex = 3;
+            menuPlay.Anchor = AnchorStyles.Top;
+            menuPlay.Location = new Point(486, 221);
+            menuPlay.Margin = new Padding(4, 5, 4, 5);
+            menuPlay.Name = "menuPlay";
+            menuPlay.Size = new Size(108, 40);
+            menuPlay.TabIndex = 0;
+            menuPlay.Text = "Play";
+            menuPlay.UseVisualStyleBackColor = true;
+            menuPlay.Click += menuPlay_Click;
             // 
-            // selectionBack
+            // MainMenu
             // 
-            selectionBack.Anchor = AnchorStyles.Top;
-            selectionBack.Location = new Point(275, 287);
-            selectionBack.Margin = new Padding(4, 5, 4, 5);
-            selectionBack.Name = "selectionBack";
-            selectionBack.Size = new Size(108, 37);
-            selectionBack.TabIndex = 1;
-            selectionBack.Text = "back";
-            selectionBack.UseVisualStyleBackColor = true;
-            selectionBack.Click += selectionBack_Click;
-            // 
-            // selectionKurniky
-            // 
-            selectionKurniky.Anchor = AnchorStyles.Top;
-            selectionKurniky.Location = new Point(34, 287);
-            selectionKurniky.Margin = new Padding(4, 5, 4, 5);
-            selectionKurniky.Name = "selectionKurniky";
-            selectionKurniky.Size = new Size(108, 37);
-            selectionKurniky.TabIndex = 0;
-            selectionKurniky.Text = "Kurniky";
-            selectionKurniky.UseVisualStyleBackColor = true;
-            selectionKurniky.Click += selectionKurniky_Click;
+            MainMenu.Anchor = AnchorStyles.None;
+            MainMenu.AutoSize = true;
+            MainMenu.Controls.Add(menuPlay);
+            MainMenu.Location = new Point(0, 0);
+            MainMenu.Margin = new Padding(4, 5, 4, 5);
+            MainMenu.Name = "MainMenu";
+            MainMenu.Size = new Size(1109, 498);
+            MainMenu.TabIndex = 2;
+            MainMenu.Paint += panel1_Paint;
             // 
             // Kurniky
             // 
@@ -114,12 +103,11 @@
             Kurniky.Controls.Add(statusLabel);
             Kurniky.Controls.Add(purchaseChicken);
             Kurniky.Controls.Add(kurnikyBack);
-            Kurniky.Location = new Point(1, 130);
+            Kurniky.Location = new Point(1, 0);
             Kurniky.Margin = new Padding(4, 5, 4, 5);
             Kurniky.Name = "Kurniky";
             Kurniky.Size = new Size(1105, 504);
-            Kurniky.TabIndex = 2;
-            Kurniky.Paint += Kurniky_Paint;
+            Kurniky.TabIndex = 4;
             // 
             // coop
             // 
@@ -143,7 +131,6 @@
             pictureBox3.Size = new Size(25, 25);
             pictureBox3.TabIndex = 18;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click_2;
             // 
             // cheat
             // 
@@ -162,7 +149,6 @@
             cheat.TabIndex = 12;
             cheat.TextImageRelation = TextImageRelation.ImageAboveText;
             cheat.UseVisualStyleBackColor = false;
-            cheat.Click += cheat_Click;
             // 
             // Info
             // 
@@ -186,7 +172,6 @@
             epsLabel.Size = new Size(55, 23);
             epsLabel.TabIndex = 8;
             epsLabel.Text = "EpS: 0";
-            epsLabel.Click += epsLabel_Click;
             // 
             // moneyCountLabel
             // 
@@ -198,7 +183,6 @@
             moneyCountLabel.Size = new Size(77, 23);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
-            moneyCountLabel.Click += moneyCountLabel_Click;
             // 
             // eggCountLabel
             // 
@@ -210,7 +194,6 @@
             eggCountLabel.Size = new Size(60, 23);
             eggCountLabel.TabIndex = 3;
             eggCountLabel.Text = "Eggs: 0";
-            eggCountLabel.Click += label1_Click_1;
             // 
             // chickenCountLabel
             // 
@@ -241,44 +224,40 @@
             button1.TabIndex = 14;
             button1.Text = "Buy coop $200";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += purchaseCoop_Click;
             // 
             // upgradeDesc
             // 
             upgradeDesc.Anchor = AnchorStyles.Top;
             upgradeDesc.Font = new Font("Verdana", 7.8F);
-            upgradeDesc.Location = new Point(566, 234);
+            upgradeDesc.Location = new Point(750, 270);
             upgradeDesc.Name = "upgradeDesc";
             upgradeDesc.Size = new Size(170, 30);
             upgradeDesc.TabIndex = 11;
             upgradeDesc.Text = "Temp   ";
             upgradeDesc.TextAlign = ContentAlignment.MiddleCenter;
-            upgradeDesc.Click += upgradeDesc_Click;
             // 
             // upgradeName
             // 
             upgradeName.Anchor = AnchorStyles.Top;
             upgradeName.Font = new Font("Verdana", 7.8F);
-            upgradeName.Location = new Point(566, 199);
+            upgradeName.Location = new Point(791, 212);
             upgradeName.Name = "upgradeName";
             upgradeName.Size = new Size(170, 30);
             upgradeName.TabIndex = 10;
             upgradeName.Text = "Temp   ";
             upgradeName.TextAlign = ContentAlignment.MiddleCenter;
-            upgradeName.Click += upgradeName_Click;
             // 
             // upgradeBuy
             // 
             upgradeBuy.Anchor = AnchorStyles.Top;
             upgradeBuy.BackColor = SystemColors.Control;
             upgradeBuy.Font = new Font("Verdana", 7.8F);
-            upgradeBuy.Location = new Point(586, 154);
+            upgradeBuy.Location = new Point(811, 154);
             upgradeBuy.Name = "upgradeBuy";
             upgradeBuy.Size = new Size(150, 40);
             upgradeBuy.TabIndex = 9;
             upgradeBuy.Text = "Buy";
             upgradeBuy.UseVisualStyleBackColor = false;
-            upgradeBuy.Click += buyUpgrade_Click;
             // 
             // removeChicken
             // 
@@ -291,7 +270,6 @@
             removeChicken.TabIndex = 8;
             removeChicken.Text = "Remove chicken";
             removeChicken.UseVisualStyleBackColor = false;
-            removeChicken.Click += removeChicken_Click;
             // 
             // sellEggs
             // 
@@ -305,7 +283,6 @@
             sellEggs.Size = new Size(55, 48);
             sellEggs.TabIndex = 6;
             sellEggs.UseVisualStyleBackColor = false;
-            sellEggs.Click += sellEggs_Click;
             // 
             // statusLabel
             // 
@@ -318,7 +295,6 @@
             statusLabel.Size = new Size(73, 24);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "status";
-            statusLabel.Click += label1_Click;
             // 
             // purchaseChicken
             // 
@@ -330,7 +306,6 @@
             purchaseChicken.TabIndex = 2;
             purchaseChicken.Text = "Buy chicken $50";
             purchaseChicken.UseVisualStyleBackColor = false;
-            purchaseChicken.Click += purchaseChicken_Click;
             // 
             // kurnikyBack
             // 
@@ -338,7 +313,7 @@
             kurnikyBack.BackColor = SystemColors.ControlDark;
             kurnikyBack.FlatStyle = FlatStyle.System;
             kurnikyBack.Font = new Font("Verdana", 7.8F);
-            kurnikyBack.Location = new Point(682, 470);
+            kurnikyBack.Location = new Point(597, 402);
             kurnikyBack.Margin = new Padding(4, 5, 4, 5);
             kurnikyBack.Name = "kurnikyBack";
             kurnikyBack.Size = new Size(65, 29);
@@ -347,30 +322,40 @@
             kurnikyBack.UseVisualStyleBackColor = false;
             kurnikyBack.Click += kurnikyBack_Click;
             // 
-            // menuPlay
+            // SelectionScreen
             // 
-            menuPlay.Anchor = AnchorStyles.Top;
-            menuPlay.Location = new Point(497, 287);
-            menuPlay.Margin = new Padding(4, 5, 4, 5);
-            menuPlay.Name = "menuPlay";
-            menuPlay.Size = new Size(108, 40);
-            menuPlay.TabIndex = 0;
-            menuPlay.Text = "Play";
-            menuPlay.UseVisualStyleBackColor = true;
-            menuPlay.Click += menuPlay_Click;
+            SelectionScreen.Anchor = AnchorStyles.None;
+            SelectionScreen.Controls.Add(selectionBack);
+            SelectionScreen.Controls.Add(selectionKurniky);
+            SelectionScreen.Location = new Point(1, 2);
+            SelectionScreen.Margin = new Padding(4, 5, 4, 5);
+            SelectionScreen.Name = "SelectionScreen";
+            SelectionScreen.Size = new Size(1105, 501);
+            SelectionScreen.TabIndex = 5;
             // 
-            // MainMenu
+            // selectionBack
             // 
-            MainMenu.Anchor = AnchorStyles.None;
-            MainMenu.AutoSize = true;
-            MainMenu.Controls.Add(Kurniky);
-            MainMenu.Controls.Add(menuPlay);
-            MainMenu.Location = new Point(-1, -130);
-            MainMenu.Margin = new Padding(4, 5, 4, 5);
-            MainMenu.Name = "MainMenu";
-            MainMenu.Size = new Size(1109, 677);
-            MainMenu.TabIndex = 2;
-            MainMenu.Paint += panel1_Paint;
+            selectionBack.Anchor = AnchorStyles.Top;
+            selectionBack.Location = new Point(824, 245);
+            selectionBack.Margin = new Padding(4, 5, 4, 5);
+            selectionBack.Name = "selectionBack";
+            selectionBack.Size = new Size(108, 37);
+            selectionBack.TabIndex = 1;
+            selectionBack.Text = "back";
+            selectionBack.UseVisualStyleBackColor = true;
+            selectionBack.Click += selectionBack_Click;
+            // 
+            // selectionKurniky
+            // 
+            selectionKurniky.Anchor = AnchorStyles.Top;
+            selectionKurniky.Location = new Point(119, 219);
+            selectionKurniky.Margin = new Padding(4, 5, 4, 5);
+            selectionKurniky.Name = "selectionKurniky";
+            selectionKurniky.Size = new Size(108, 37);
+            selectionKurniky.TabIndex = 0;
+            selectionKurniky.Text = "Kurniky";
+            selectionKurniky.UseVisualStyleBackColor = true;
+            selectionKurniky.Click += selectionKurniky_Click;
             // 
             // Menu
             // 
@@ -380,6 +365,7 @@
             ClientSize = new Size(1107, 504);
             Controls.Add(MainMenu);
             Controls.Add(SelectionScreen);
+            Controls.Add(Kurniky);
             Font = new Font("Papyrus", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
@@ -389,14 +375,14 @@
             Text = "Farma Joko";
             WindowState = FormWindowState.Minimized;
             Load += Menu_Load;
-            SelectionScreen.ResumeLayout(false);
+            MainMenu.ResumeLayout(false);
             Kurniky.ResumeLayout(false);
             Kurniky.PerformLayout();
             coop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             Info.ResumeLayout(false);
             Info.PerformLayout();
-            MainMenu.ResumeLayout(false);
+            SelectionScreen.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -404,11 +390,8 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private Panel SelectionScreen;
-        private Button selectionKurniky;
         private Panel Kurniky;
         private Button kurnikyBack;
-        private Button selectionBack;
         private Button purchaseChicken;
         private Button menuPlay;
         private Label statusLabel;
@@ -429,5 +412,8 @@
         private DoubleBufferedPanel coop;
         private PictureBox pictureBox3;
         private Label epsLabel;
+        private Panel SelectionScreen;
+        private Button selectionBack;
+        private Button selectionKurniky;
     }
 }

@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|solutionrelative:farma-joko\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|c:\\users\\tomas\\source\\repos\\farma-joko\\farma-joko\\farm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|solutionrelative:farma-joko\\farm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|c:\\users\\tomas\\source\\repos\\farma-joko\\farma-joko\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|solutionrelative:farma-joko\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|c:\\users\\tomas\\source\\repos\\farma-joko\\farma-joko\\farm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|solutionrelative:farma-joko\\farm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AB6769A-F1F8-4413-9F88-45D7B62AA3C3}|Farma-Joko\\Farma-Joko.csproj|c:\\users\\tomas\\source\\repos\\farma-joko\\farma-joko\\chicken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Farm.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Farm.cs",
               "RelativeDocumentMoniker": "Farma-Joko\\Farm.cs",
@@ -88,8 +88,8 @@
               "Title": "Menu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs",
               "RelativeDocumentMoniker": "Farma-Joko\\Menu.cs",
-              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs [Design]",
-              "RelativeToolTip": "Farma-Joko\\Menu.cs [Design]",
+              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs [Design]*",
+              "RelativeToolTip": "Farma-Joko\\Menu.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T17:01:57.083Z",
               "EditorCaption": " [Design]"
@@ -100,9 +100,9 @@
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs",
               "RelativeDocumentMoniker": "Farma-Joko\\Menu.cs",
-              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs",
-              "RelativeToolTip": "Farma-Joko\\Menu.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAADwv4QAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.cs*",
+              "RelativeToolTip": "Farma-Joko\\Menu.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvzEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T11:27:55.798Z",
               "EditorCaption": ""
@@ -133,13 +133,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Menu.Designer.cs",
               "DocumentMoniker": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.Designer.cs",
               "RelativeDocumentMoniker": "Farma-Joko\\Menu.Designer.cs",
-              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.Designer.cs",
-              "RelativeToolTip": "Farma-Joko\\Menu.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\tomas\\source\\repos\\Farma-Joko\\Farma-Joko\\Menu.Designer.cs*",
+              "RelativeToolTip": "Farma-Joko\\Menu.Designer.cs*",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T12:59:26.153Z",
               "EditorCaption": ""
