@@ -83,6 +83,36 @@ namespace Farma_Joko.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_gold_play {
+            get {
+                object obj = ResourceManager.GetObject("button_gold_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_green_sell {
+            get {
+                object obj = ResourceManager.GetObject("button_green_sell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_red_remove {
+            get {
+                object obj = ResourceManager.GetObject("button_red_remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chicken {
             get {
                 object obj = ResourceManager.GetObject("chicken", resourceCulture);
@@ -163,6 +193,16 @@ namespace Farma_Joko.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paper_scroll {
+            get {
+                object obj = ResourceManager.GetObject("paper-scroll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap slipka {
             get {
                 object obj = ResourceManager.GetObject("slipka", resourceCulture);
@@ -196,6 +236,16 @@ namespace Farma_Joko.Properties {
         internal static System.Drawing.Bitmap sprite_sliepka_new1 {
             get {
                 object obj = ResourceManager.GetObject("sprite_sliepka_new1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sprite_sliepka_new2 {
+            get {
+                object obj = ResourceManager.GetObject("sprite_sliepka_new2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
