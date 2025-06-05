@@ -55,7 +55,7 @@ namespace Farma_Joko
             }
             else
             {
-                mute.Image= Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "mute.png"));
+                mute.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "mute.png"));
             }
 
         }
@@ -260,5 +260,9 @@ namespace Farma_Joko
 
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
