@@ -225,5 +225,20 @@ namespace Farma_Joko
         {
 
         }
+
+        private void Kurniky_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SelectionScreen_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void statusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

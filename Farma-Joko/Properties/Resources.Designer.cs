@@ -73,9 +73,29 @@ namespace Farma_Joko.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_button_tabula {
+            get {
+                object obj = ResourceManager.GetObject("back_button_tabula", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chicken {
             get {
                 object obj = ResourceManager.GetObject("chicken", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_farm_background_bg {
+            get {
+                object obj = ResourceManager.GetObject("chicken_farm_background_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,36 @@ namespace Farma_Joko.Properties {
         internal static System.Drawing.Bitmap kurenec {
             get {
                 object obj = ResourceManager.GetObject("kurenec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap main_menu_bg {
+            get {
+                object obj = ResourceManager.GetObject("main_menu_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map_menu_bg_v4 {
+            get {
+                object obj = ResourceManager.GetObject("map_menu_bg_v4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap miniKurenec {
+            get {
+                object obj = ResourceManager.GetObject("miniKurenec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
