@@ -1,4 +1,6 @@
 using System.Windows.Forms;
+using WMPLib;
+
 
 namespace Farma_Joko
 {
@@ -10,8 +12,15 @@ namespace Farma_Joko
         private System.Windows.Forms.Timer uiTimer = new System.Windows.Forms.Timer();
         internal Upgrade selectedUpgrade;
 
+        WindowsMediaPlayer musicPlayer = new WindowsMediaPlayer();
+        bool isMuted = false;
         public Menu()
         {
+            musicPlayer.URL = Path.Combine(Application.StartupPath, "assets", "easyLemon.mp3"); ;
+            musicPlayer.settings.setMode("loop", true);
+            musicPlayer.settings.volume = 70;
+            musicPlayer.controls.play();
+
             uiTimer.Interval = 10;
             uiTimer.Start();
             uiTimer.Tick += UiTimer_Tick;
@@ -35,7 +44,21 @@ namespace Farma_Joko
         }
 
 
+        private void mute_Click(object sender, EventArgs e)
+        {
+            isMuted = !isMuted;
+            musicPlayer.settings.volume = isMuted ? 0 : 100;
 
+            if (isMuted)
+            {
+                mute.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "unmute.png"));
+            }
+            else
+            {
+                mute.Image= Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "mute.png"));
+            }
+
+        }
 
         private void selectionKurniky_Click(object sender, EventArgs e)
         {
@@ -98,8 +121,6 @@ namespace Farma_Joko
             {
                 if (!upgrade.isBought)
                 {
-                    upgradeName.Text = upgrade.name;
-                    upgradeDesc.Text = upgrade.description;
                     upgradeBuy.Text = "Buy for $" + upgrade.price.ToString();
                     selectedUpgrade = upgrade;
                     break;
@@ -107,8 +128,6 @@ namespace Farma_Joko
                 else
                 {
 
-                    upgradeName.Text = "";
-                    upgradeDesc.Text = "";
                     upgradeBuy.Text = "";
                     selectedUpgrade = null;
                 }
@@ -240,5 +259,6 @@ namespace Farma_Joko
         {
 
         }
+
     }
 }

@@ -33,6 +33,7 @@
             menuPlay = new Button();
             MainMenu = new Panel();
             Kurniky = new DoubleBufferedPanel();
+            mute = new Button();
             coop = new DoubleBufferedPanel();
             pictureBox3 = new PictureBox();
             cheat = new Button();
@@ -92,6 +93,7 @@
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackColor = SystemColors.ActiveBorder;
             Kurniky.BackgroundImage = Properties.Resources.chicken_farm_background_bg;
+            Kurniky.Controls.Add(mute);
             Kurniky.Controls.Add(coop);
             Kurniky.Controls.Add(cheat);
             Kurniky.Controls.Add(Info);
@@ -108,6 +110,18 @@
             Kurniky.Size = new Size(432, 763);
             Kurniky.TabIndex = 4;
             Kurniky.Paint += Kurniky_Paint_1;
+            // 
+            // mute
+            // 
+            mute.BackColor = Color.Transparent;
+            mute.FlatStyle = FlatStyle.Popup;
+            mute.Image = Properties.Resources.mute;
+            mute.Location = new Point(181, 94);
+            mute.Name = "mute";
+            mute.Size = new Size(29, 33);
+            mute.TabIndex = 21;
+            mute.UseVisualStyleBackColor = false;
+            mute.Click += mute_Click;
             // 
             // coop
             // 
@@ -169,7 +183,7 @@
             epsLabel.Location = new Point(340, 8);
             epsLabel.Name = "epsLabel";
             epsLabel.Padding = new Padding(5);
-            epsLabel.Size = new Size(61, 26);
+            epsLabel.Size = new Size(55, 23);
             epsLabel.TabIndex = 8;
             epsLabel.Text = "EpS: 0";
             // 
@@ -180,7 +194,7 @@
             moneyCountLabel.Location = new Point(133, 8);
             moneyCountLabel.Name = "moneyCountLabel";
             moneyCountLabel.Padding = new Padding(5);
-            moneyCountLabel.Size = new Size(92, 27);
+            moneyCountLabel.Size = new Size(77, 23);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
             // 
@@ -191,7 +205,7 @@
             eggCountLabel.Location = new Point(253, 8);
             eggCountLabel.Name = "eggCountLabel";
             eggCountLabel.Padding = new Padding(5);
-            eggCountLabel.Size = new Size(67, 26);
+            eggCountLabel.Size = new Size(60, 23);
             eggCountLabel.TabIndex = 3;
             eggCountLabel.Text = "Eggs: 0";
             // 
@@ -202,7 +216,7 @@
             chickenCountLabel.Location = new Point(8, 8);
             chickenCountLabel.Name = "chickenCountLabel";
             chickenCountLabel.Padding = new Padding(5);
-            chickenCountLabel.Size = new Size(108, 26);
+            chickenCountLabel.Size = new Size(97, 23);
             chickenCountLabel.TabIndex = 5;
             chickenCountLabel.Text = "Chickens: 0/0";
             // 
@@ -268,7 +282,7 @@
             statusLabel.ForeColor = Color.LawnGreen;
             statusLabel.Location = new Point(22, 237);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(94, 32);
+            statusLabel.Size = new Size(73, 24);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "status";
             statusLabel.Click += statusLabel_Click;
@@ -342,7 +356,7 @@
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 24F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
@@ -396,5 +410,6 @@
         private Panel SelectionScreen;
         private Button selectionBack;
         private Button selectionKurniky;
+        private Button mute;
     }
 }
