@@ -112,7 +112,7 @@
             Kurniky.Anchor = AnchorStyles.Top;
             Kurniky.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Kurniky.BackColor = SystemColors.ActiveBorder;
-            Kurniky.BackgroundImage = Properties.Resources.chicken_farm_background_bg1;
+            Kurniky.BackgroundImage = Properties.Resources.chicken_farm_background_bg;
             Kurniky.Controls.Add(epsLabel);
             Kurniky.Controls.Add(eggCountLabel);
             Kurniky.Controls.Add(moneyCountLabel);
@@ -274,7 +274,7 @@
             upgradeBuy.FlatAppearance.MouseOverBackColor = Color.Transparent;
             upgradeBuy.FlatStyle = FlatStyle.Flat;
             upgradeBuy.Font = new Font("Arial Black", 8.25F);
-            upgradeBuy.Image = Properties.Resources.upgrade_upgrade_bez_shadowu_1;
+            upgradeBuy.Image = Properties.Resources.upgrade_upgrade_bez_shadowu_;
             upgradeBuy.Location = new Point(0, 509);
             upgradeBuy.Name = "upgradeBuy";
             upgradeBuy.Size = new Size(91, 79);

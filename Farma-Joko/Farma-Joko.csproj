@@ -14,8 +14,13 @@
     <None Remove="assets\button_red_remove.png" />
     <None Remove="assets\mute.png" />
     <None Remove="assets\unmute.png" />
+    <None Remove="Resources\button_royalblue_back.png" />
+    <None Remove="Resources\chicken_farm_background_bg.png" />
     <None Remove="Resources\mute.png" />
     <None Remove="Resources\unmute.png" />
+    <None Remove="Resources\upgrade_chicken_bez_shadowu.png" />
+    <None Remove="Resources\upgrade_kurnik_bez_shadowu.png" />
+    <None Remove="Resources\upgrade_upgrade_bez_shadowu_.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,10 +40,25 @@
     <Content Include="assets\button_red_remove.png" />
     <Content Include="assets\mute.png" />
     <Content Include="assets\unmute.png" />
+    <Content Include="Resources\button_royalblue_back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\chicken_farm_background_bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\mute.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\unmute.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\upgrade_chicken_bez_shadowu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\upgrade_kurnik_bez_shadowu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\upgrade_upgrade_bez_shadowu_.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
