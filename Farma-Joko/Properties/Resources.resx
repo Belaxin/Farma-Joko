@@ -118,50 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_red_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\button_red_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slipka1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\slipka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="miniKurenec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\miniKurenec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="180px-Grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\180px-Grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chicken1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vajec1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\vajec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map_menu_bg_v4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\map_menu_bg_v4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chicken_farm_background_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\chicken_farm_background_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sprite_sliepka_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\sprite_sliepka_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vajec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\vajec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main_menu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\main_menu_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paper-scroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\paper-scroll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sprite_sliepka_new2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sprite_sliepka_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back_button_tabula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\back_button_tabula.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\upgrade_chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_upgrade_bez_shadowu_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upgrade_upgrade_bez_shadowu_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_gold_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\button_gold_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,19 +136,76 @@
   <data name="slipka" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slipka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="back_button_tabula" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\back_button_tabula.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sprite_sliepka_new1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\sprite_sliepka_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="main_menu_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\main_menu_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kurenec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\kurenec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="upgradeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\upgradeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="chicken_farm_background_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\chicken_farm_background_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_sliepka_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\sprite_sliepka_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_upgrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\upgrade_upgrade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_red_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\button_red_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_green_sell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\button_green_sell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_chicken_bez_shadowu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upgrade_chicken_bez_shadowu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="180px-Grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\180px-Grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken_farm_background_bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken_farm_background_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vajec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\vajec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miniKurenec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\miniKurenec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vajec1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\vajec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_kurnik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\upgrade_kurnik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper-scroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\paper-scroll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map_menu_bg_v4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\map_menu_bg_v4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slipka1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\slipka.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_sliepka_new1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\sprite_sliepka_new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_kurnik_bez_shadowu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upgrade_kurnik_bez_shadowu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_upgrade_bez_shadowu_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upgrade_upgrade_bez_shadowu_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

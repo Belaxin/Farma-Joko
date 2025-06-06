@@ -133,6 +133,16 @@ namespace Farma_Joko.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chicken_farm_background_bg1 {
+            get {
+                object obj = ResourceManager.GetObject("chicken_farm_background_bg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chicken1 {
             get {
                 object obj = ResourceManager.GetObject("chicken1", resourceCulture);
@@ -246,6 +256,76 @@ namespace Farma_Joko.Properties {
         internal static System.Drawing.Bitmap sprite_sliepka_new2 {
             get {
                 object obj = ResourceManager.GetObject("sprite_sliepka_new2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_chicken {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_chicken", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_chicken_bez_shadowu {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_chicken_bez_shadowu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_kurnik {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_kurnik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_kurnik_bez_shadowu {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_kurnik_bez_shadowu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_upgrade {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_upgrade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_upgrade_bez_shadowu_ {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_upgrade_bez_shadowu_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upgrade_upgrade_bez_shadowu_1 {
+            get {
+                object obj = ResourceManager.GetObject("upgrade_upgrade_bez_shadowu_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

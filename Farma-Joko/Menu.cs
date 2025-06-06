@@ -101,15 +101,15 @@ namespace Farma_Joko
         }
         public void updateEggCount(int eggs)
         {
-            eggCountLabel.Text = "Eggs: " + eggs.ToString();
+            eggCountLabel.Text = ": " + eggs.ToString();
         }
         public void updateChickenCount(int chickens, int coops)
         {
-            chickenCountLabel.Text = $"Chickens: {chickens.ToString()} / {(coops * 10).ToString()} ";
+            chickenCountLabel.Text = $": {chickens.ToString()} / {(coops * 10).ToString()} ";
         }
         public void updateMoneyCount(int money)
         {
-            moneyCountLabel.Text = "Money: $" + money.ToString();
+            moneyCountLabel.Text = ": $" + money.ToString();
         }
         public void updateEpS(double eggTimeInterval)
         {
@@ -120,16 +120,14 @@ namespace Farma_Joko
             foreach (Upgrade upgrade in list)
             {
                 if (!upgrade.isBought)
-                {
-                    label3.Visible = true;
+                {                  
                     upgradeBuy.Visible = true;
-                    label3.Text = upgrade.price.ToString() + "$";
+                    upgradeBuy.Text = upgrade.price.ToString();
                     selectedUpgrade = upgrade;
                     break;
                 }
                 else
                 {
-                    label3.Visible = false;
                     upgradeBuy.Visible = false;
                     upgradeBuy.Text = "";
                     selectedUpgrade = null;
@@ -284,6 +282,11 @@ namespace Farma_Joko
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_4(object sender, EventArgs e)
         {
 
         }
