@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             menuPlay = new Button();
             MainMenu = new Panel();
+            mute = new Button();
             Kurniky = new DoubleBufferedPanel();
             epsLabel = new Label();
             eggCountLabel = new Label();
             moneyCountLabel = new Label();
             chickenCountLabel = new Label();
             purchaseChicken = new Button();
-            mute = new Button();
             kurnikyBack = new Button();
             button1 = new Button();
             coop = new DoubleBufferedPanel();
@@ -68,7 +68,7 @@
             menuPlay.FlatAppearance.MouseOverBackColor = Color.Transparent;
             menuPlay.FlatStyle = FlatStyle.Flat;
             menuPlay.Image = (Image)resources.GetObject("menuPlay.Image");
-            menuPlay.Location = new Point(86, 309);
+            menuPlay.Location = new Point(94, 309);
             menuPlay.Margin = new Padding(4, 5, 4, 5);
             menuPlay.Name = "menuPlay";
             menuPlay.Size = new Size(244, 151);
@@ -83,6 +83,7 @@
             MainMenu.BackColor = SystemColors.Control;
             MainMenu.BackgroundImage = Properties.Resources.main_menu_bg;
             MainMenu.BackgroundImageLayout = ImageLayout.Zoom;
+            MainMenu.Controls.Add(mute);
             MainMenu.Controls.Add(menuPlay);
             MainMenu.Location = new Point(1, 1);
             MainMenu.Margin = new Padding(4, 5, 4, 5);
@@ -90,6 +91,21 @@
             MainMenu.Size = new Size(432, 763);
             MainMenu.TabIndex = 2;
             MainMenu.Paint += panel1_Paint;
+            // 
+            // mute
+            // 
+            mute.BackColor = Color.Transparent;
+            mute.FlatAppearance.BorderSize = 0;
+            mute.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            mute.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            mute.FlatStyle = FlatStyle.Flat;
+            mute.Image = Properties.Resources.mute;
+            mute.Location = new Point(368, 4);
+            mute.Name = "mute";
+            mute.Size = new Size(53, 50);
+            mute.TabIndex = 21;
+            mute.UseVisualStyleBackColor = false;
+            mute.Click += mute_Click;
             // 
             // Kurniky
             // 
@@ -102,7 +118,6 @@
             Kurniky.Controls.Add(moneyCountLabel);
             Kurniky.Controls.Add(chickenCountLabel);
             Kurniky.Controls.Add(purchaseChicken);
-            Kurniky.Controls.Add(mute);
             Kurniky.Controls.Add(kurnikyBack);
             Kurniky.Controls.Add(button1);
             Kurniky.Controls.Add(coop);
@@ -123,7 +138,7 @@
             epsLabel.AutoSize = true;
             epsLabel.BackColor = Color.Transparent;
             epsLabel.Font = new Font("Arial Black", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            epsLabel.Location = new Point(341, 146);
+            epsLabel.Location = new Point(326, 145);
             epsLabel.Name = "epsLabel";
             epsLabel.Padding = new Padding(5);
             epsLabel.Size = new Size(55, 25);
@@ -135,6 +150,7 @@
             eggCountLabel.AutoSize = true;
             eggCountLabel.BackColor = Color.Transparent;
             eggCountLabel.Font = new Font("Arial Black", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            eggCountLabel.ForeColor = Color.White;
             eggCountLabel.Location = new Point(233, 20);
             eggCountLabel.Name = "eggCountLabel";
             eggCountLabel.Padding = new Padding(5);
@@ -147,6 +163,7 @@
             moneyCountLabel.AutoSize = true;
             moneyCountLabel.BackColor = Color.Transparent;
             moneyCountLabel.Font = new Font("Arial Black", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            moneyCountLabel.ForeColor = Color.White;
             moneyCountLabel.Location = new Point(350, 19);
             moneyCountLabel.Name = "moneyCountLabel";
             moneyCountLabel.Padding = new Padding(5);
@@ -159,6 +176,7 @@
             chickenCountLabel.AutoSize = true;
             chickenCountLabel.BackColor = Color.Transparent;
             chickenCountLabel.Font = new Font("Arial Black", 7.8F);
+            chickenCountLabel.ForeColor = Color.White;
             chickenCountLabel.Location = new Point(133, 20);
             chickenCountLabel.Name = "chickenCountLabel";
             chickenCountLabel.Padding = new Padding(5);
@@ -168,7 +186,7 @@
             // 
             // purchaseChicken
             // 
-            purchaseChicken.Anchor = AnchorStyles.None;
+            purchaseChicken.Anchor = AnchorStyles.Top;
             purchaseChicken.BackColor = Color.Transparent;
             purchaseChicken.BackgroundImageLayout = ImageLayout.Center;
             purchaseChicken.FlatAppearance.BorderSize = 0;
@@ -177,7 +195,7 @@
             purchaseChicken.FlatStyle = FlatStyle.Flat;
             purchaseChicken.Font = new Font("Arial Black", 8.25F);
             purchaseChicken.Image = Properties.Resources.upgrade_chicken_bez_shadowu;
-            purchaseChicken.Location = new Point(3, 348);
+            purchaseChicken.Location = new Point(0, 318);
             purchaseChicken.Name = "purchaseChicken";
             purchaseChicken.Padding = new Padding(0, 0, 0, 20);
             purchaseChicken.Size = new Size(91, 101);
@@ -186,21 +204,6 @@
             purchaseChicken.TextAlign = ContentAlignment.BottomCenter;
             purchaseChicken.UseVisualStyleBackColor = false;
             purchaseChicken.Click += purchaseChicken_Click;
-            // 
-            // mute
-            // 
-            mute.BackColor = Color.Transparent;
-            mute.FlatAppearance.BorderSize = 0;
-            mute.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            mute.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            mute.FlatStyle = FlatStyle.Flat;
-            mute.Image = Properties.Resources.mute;
-            mute.Location = new Point(26, 146);
-            mute.Name = "mute";
-            mute.Size = new Size(53, 50);
-            mute.TabIndex = 21;
-            mute.UseVisualStyleBackColor = false;
-            mute.Click += mute_Click;
             // 
             // kurnikyBack
             // 
@@ -211,11 +214,11 @@
             kurnikyBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
             kurnikyBack.FlatStyle = FlatStyle.Flat;
             kurnikyBack.Font = new Font("Verdana", 7.8F);
-            kurnikyBack.Image = (Image)resources.GetObject("kurnikyBack.Image");
-            kurnikyBack.Location = new Point(3, 13);
+            kurnikyBack.Image = Properties.Resources.button_royalblue_back;
+            kurnikyBack.Location = new Point(0, 9);
             kurnikyBack.Margin = new Padding(4, 5, 4, 5);
             kurnikyBack.Name = "kurnikyBack";
-            kurnikyBack.Size = new Size(76, 41);
+            kurnikyBack.Size = new Size(94, 52);
             kurnikyBack.TabIndex = 1;
             kurnikyBack.UseVisualStyleBackColor = false;
             kurnikyBack.Click += kurnikyBack_Click;
@@ -231,7 +234,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Arial Black", 8.25F);
             button1.Image = Properties.Resources.upgrade_kurnik_bez_shadowu;
-            button1.Location = new Point(3, 441);
+            button1.Location = new Point(0, 414);
             button1.Name = "button1";
             button1.Size = new Size(91, 82);
             button1.TabIndex = 14;
@@ -272,7 +275,7 @@
             upgradeBuy.FlatStyle = FlatStyle.Flat;
             upgradeBuy.Font = new Font("Arial Black", 8.25F);
             upgradeBuy.Image = Properties.Resources.upgrade_upgrade_bez_shadowu_1;
-            upgradeBuy.Location = new Point(3, 529);
+            upgradeBuy.Location = new Point(0, 509);
             upgradeBuy.Name = "upgradeBuy";
             upgradeBuy.Size = new Size(91, 79);
             upgradeBuy.TabIndex = 9;
@@ -291,7 +294,7 @@
             cheat.Font = new Font("Verdana", 7.8F);
             cheat.ForeColor = Color.Transparent;
             cheat.Image = (Image)resources.GetObject("cheat.Image");
-            cheat.Location = new Point(386, 671);
+            cheat.Location = new Point(383, 660);
             cheat.Margin = new Padding(0);
             cheat.Name = "cheat";
             cheat.Size = new Size(25, 25);
@@ -309,7 +312,7 @@
             removeChicken.FlatStyle = FlatStyle.Flat;
             removeChicken.Font = new Font("Verdana", 7.8F);
             removeChicken.Image = Properties.Resources.button_red_remove;
-            removeChicken.Location = new Point(3, 680);
+            removeChicken.Location = new Point(9, 678);
             removeChicken.Name = "removeChicken";
             removeChicken.Size = new Size(180, 72);
             removeChicken.TabIndex = 8;
@@ -326,7 +329,7 @@
             sellEggs.FlatStyle = FlatStyle.Flat;
             sellEggs.Font = new Font("Verdana", 7.8F);
             sellEggs.Image = Properties.Resources.button_green_sell;
-            sellEggs.Location = new Point(189, 680);
+            sellEggs.Location = new Point(195, 678);
             sellEggs.Name = "sellEggs";
             sellEggs.Size = new Size(121, 72);
             sellEggs.TabIndex = 6;
@@ -339,7 +342,7 @@
             statusLabel.BackColor = Color.Transparent;
             statusLabel.Font = new Font("Arial Black", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             statusLabel.ForeColor = Color.Navy;
-            statusLabel.Location = new Point(3, 225);
+            statusLabel.Location = new Point(3, 74);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new Size(80, 28);
             statusLabel.TabIndex = 4;
@@ -369,7 +372,7 @@
             selectionBack.FlatStyle = FlatStyle.Flat;
             selectionBack.ForeColor = Color.Transparent;
             selectionBack.Image = (Image)resources.GetObject("selectionBack.Image");
-            selectionBack.Location = new Point(0, 5);
+            selectionBack.Location = new Point(4, 12);
             selectionBack.Margin = new Padding(4, 5, 4, 5);
             selectionBack.Name = "selectionBack";
             selectionBack.Size = new Size(126, 60);
@@ -386,7 +389,7 @@
             selectionKurniky.FlatAppearance.MouseOverBackColor = Color.Transparent;
             selectionKurniky.FlatStyle = FlatStyle.Flat;
             selectionKurniky.Image = (Image)resources.GetObject("selectionKurniky.Image");
-            selectionKurniky.Location = new Point(212, 300);
+            selectionKurniky.Location = new Point(214, 300);
             selectionKurniky.Margin = new Padding(4, 5, 4, 5);
             selectionKurniky.Name = "selectionKurniky";
             selectionKurniky.Size = new Size(120, 103);
@@ -401,9 +404,9 @@
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(433, 756);
-            Controls.Add(Kurniky);
-            Controls.Add(SelectionScreen);
             Controls.Add(MainMenu);
+            Controls.Add(SelectionScreen);
+            Controls.Add(Kurniky);
             Font = new Font("Papyrus", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
