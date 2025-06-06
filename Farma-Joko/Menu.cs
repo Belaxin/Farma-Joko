@@ -121,13 +121,16 @@ namespace Farma_Joko
             {
                 if (!upgrade.isBought)
                 {
-                    upgradeBuy.Text = "Buy for $" + upgrade.price.ToString();
+                    label3.Visible = true;
+                    upgradeBuy.Visible = true;
+                    label3.Text = upgrade.price.ToString() + "$";
                     selectedUpgrade = upgrade;
                     break;
                 }
                 else
                 {
-
+                    label3.Visible = false;
+                    upgradeBuy.Visible = false;
                     upgradeBuy.Text = "";
                     selectedUpgrade = null;
                 }
@@ -276,6 +279,11 @@ namespace Farma_Joko
         }
 
         private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

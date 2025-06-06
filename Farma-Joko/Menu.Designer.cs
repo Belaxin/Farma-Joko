@@ -34,6 +34,7 @@
             MainMenu = new Panel();
             Kurniky = new DoubleBufferedPanel();
             panel1 = new Panel();
+            label3 = new Label();
             purchaseChicken = new Button();
             label2 = new Label();
             label1 = new Label();
@@ -124,6 +125,7 @@
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(purchaseChicken);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -134,6 +136,18 @@
             panel1.Size = new Size(180, 268);
             panel1.TabIndex = 29;
             panel1.Paint += panel1_Paint_1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial Black", 9F);
+            label3.Location = new Point(73, 236);
+            label3.Name = "label3";
+            label3.Size = new Size(40, 17);
+            label3.TabIndex = 29;
+            label3.Text = "200$";
+            label3.Click += label3_Click;
             // 
             // purchaseChicken
             // 
@@ -159,7 +173,7 @@
             label2.Font = new Font("Arial Black", 9F);
             label2.Location = new Point(70, 162);
             label2.Name = "label2";
-            label2.Size = new Size(50, 22);
+            label2.Size = new Size(40, 17);
             label2.TabIndex = 28;
             label2.Text = "200$";
             label2.Click += label2_Click;
@@ -171,7 +185,7 @@
             label1.Font = new Font("Arial Black", 9F);
             label1.Location = new Point(73, 86);
             label1.Name = "label1";
-            label1.Size = new Size(40, 22);
+            label1.Size = new Size(32, 17);
             label1.TabIndex = 27;
             label1.Text = "50$";
             // 
@@ -217,7 +231,7 @@
             mute.Image = Properties.Resources.mute;
             mute.Location = new Point(86, 45);
             mute.Name = "mute";
-            mute.Size = new Size(29, 33);
+            mute.Size = new Size(53, 50);
             mute.TabIndex = 21;
             mute.UseVisualStyleBackColor = false;
             mute.Click += mute_Click;
@@ -300,7 +314,7 @@
             epsLabel.Location = new Point(358, 8);
             epsLabel.Name = "epsLabel";
             epsLabel.Padding = new Padding(5);
-            epsLabel.Size = new Size(62, 28);
+            epsLabel.Size = new Size(55, 25);
             epsLabel.TabIndex = 8;
             epsLabel.Text = "EpS: 0";
             // 
@@ -311,7 +325,7 @@
             moneyCountLabel.Location = new Point(155, 8);
             moneyCountLabel.Name = "moneyCountLabel";
             moneyCountLabel.Padding = new Padding(5);
-            moneyCountLabel.Size = new Size(96, 29);
+            moneyCountLabel.Size = new Size(77, 25);
             moneyCountLabel.TabIndex = 7;
             moneyCountLabel.Text = "Money: $0";
             // 
@@ -322,7 +336,7 @@
             eggCountLabel.Location = new Point(280, 8);
             eggCountLabel.Name = "eggCountLabel";
             eggCountLabel.Padding = new Padding(5);
-            eggCountLabel.Size = new Size(70, 28);
+            eggCountLabel.Size = new Size(61, 25);
             eggCountLabel.TabIndex = 3;
             eggCountLabel.Text = "Eggs: 0";
             // 
@@ -333,7 +347,7 @@
             chickenCountLabel.Location = new Point(0, 8);
             chickenCountLabel.Name = "chickenCountLabel";
             chickenCountLabel.Padding = new Padding(5);
-            chickenCountLabel.Size = new Size(115, 28);
+            chickenCountLabel.Size = new Size(97, 25);
             chickenCountLabel.TabIndex = 5;
             chickenCountLabel.Text = "Chickens: 0/0";
             // 
@@ -375,7 +389,7 @@
             statusLabel.ForeColor = Color.Navy;
             statusLabel.Location = new Point(3, 225);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(80, 28);
+            statusLabel.Size = new Size(66, 23);
             statusLabel.TabIndex = 4;
             statusLabel.Text = "status";
             statusLabel.Click += statusLabel_Click;
@@ -430,7 +444,7 @@
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 24F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ControlDarkDark;
@@ -490,5 +504,6 @@
         private Label label2;
         private Label label1;
         private Panel panel1;
+        private Label label3;
     }
 }
